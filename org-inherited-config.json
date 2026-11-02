@@ -4,5 +4,12 @@
   "internalChecksFilter": "strict",
   "minimumReleaseAge": "48 hours",
   "prCreation": "not-pending",
-  "extends": ["config:recommended", "group:allNonMajor", "schedule:earlyMondays", "helpers:pinGitHubActionDigests"]
+  "extends": ["config:recommended", "group:allNonMajor", "schedule:earlyMondays", "helpers:pinGitHubActionDigests"],
+  "packageRules": [
+    {
+      "description": "Hermit releases have no timestamps, so a required release age would hold their updates forever",
+      "matchDatasources": ["hermit"],
+      "minimumReleaseAgeBehaviour": "timestamp-optional"
+    }
+  ]
 }
