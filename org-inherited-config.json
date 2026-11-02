@@ -3,7 +3,7 @@
   "automerge": true,
   "internalChecksFilter": "strict",
   "minimumReleaseAge": "48 hours",
-  "prCreation": "not-pending",
+  "prCreation": "immediate",
   "extends": ["config:recommended", "group:allNonMajor", "schedule:earlyMondays", "helpers:pinGitHubActionDigests"],
   "packageRules": [
     {
